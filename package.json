@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "rollup src/index.js --file build/bundle.js --format cjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/timtnleeProject/lazy-utility/issues"
   },
-  "homepage": "https://github.com/timtnleeProject/lazy-utility#readme"
+  "homepage": "https://github.com/timtnleeProject/lazy-utility#readme",
+  "devDependencies": {
+    "rollup": "^2.13.1"
+  }
 }
