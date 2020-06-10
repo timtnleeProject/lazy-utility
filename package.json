@@ -2,9 +2,10 @@
   "name": "lazy-utility",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist",
+  "module": "src",
   "scripts": {
-    "build": "rollup src/index.js --file build/bundle.js --format cjs",
+    "build": "rm -rf dist && babel src --out-dir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,7 +18,12 @@
     "url": "https://github.com/timtnleeProject/lazy-utility/issues"
   },
   "homepage": "https://github.com/timtnleeProject/lazy-utility#readme",
-  "devDependencies": {
-    "rollup": "^2.13.1"
+  "devDependencies": {},
+  "dependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "react": "^16.13.1"
   }
 }
