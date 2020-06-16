@@ -1,6 +1,6 @@
 export const combineTemplateString = (...args) => {
   const [strs, ...exp] = args;
-  let str = "";
+  let str = '';
   for (let i = 0; i < strs.length; i++) {
     if (exp[i]) {
       str += strs[i] + exp[i];

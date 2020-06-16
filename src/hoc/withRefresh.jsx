@@ -1,11 +1,11 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback } from 'react';
 
 /**
  * this is a trick way to refresh the whole page/component
  * like account detail page refresh
- */ 
+ */
 export default Component => {
-  return props => {
+  const WithRefresh = props => {
     const [update, setUpdate] = useState(true);
     const refresh = useCallback(() => {
       setUpdate(prev => !prev);
@@ -15,4 +15,5 @@ export default Component => {
       update ? <Component refresh={refresh} {...props} /> : <Clone />
     );
   };
+  return WithRefresh;
 };
