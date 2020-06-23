@@ -26,5 +26,6 @@ module.exports = {
       'error',
       'always'
     ]
-  }
+  },
+  ignorePatterns: ['dist/**/*.js']
 };
