@@ -20,9 +20,12 @@ const useSelection = (initial = [], isMatchSetup) => {
     return idx !== -1;
   }, [selected, isMatch]);
 
-  const isSelectedAll = useCallback(data =>
-    data.length && data.every(d => selected.find(order => order.id === d.id))
-  , [selected]);
+  const isSelectedAll = useCallback(
+    (data) =>
+      data.length &&
+      data.every((target) => selected.find((item) => isMatch(item, target))),
+    [selected, isMatch]
+  );
 
   const batchToggleSelect = useCallback(data => {
     if (isSelectedAll(data)) {
